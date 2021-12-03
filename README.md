@@ -1,17 +1,16 @@
 # h1 Heading
- ## h2 Heading
- ### h3 Heading
- #### h4 Heading
- ##### h5 Heading
- ###### h6 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
 
-
- ## Horizontal Rules
+## Horizontal Rules
 
  ___
 
 
- ## Emphasis
+## Emphasis
 
  **This is bold text**
 
@@ -24,7 +23,7 @@
  ~~Strikethrough~~
 
 
- ## Blockquotes
+## Blockquotes
 
 
  > Blockquotes can also be nested...
@@ -32,7 +31,7 @@
  > > > ...or with spaces between arrows.
 
 
- ## Lists
+## Lists
 
  Unordered
 
@@ -50,7 +49,7 @@
  2. Consectetur adipiscing elit
  3. Integer molestie lorem at massa
 
- ## Code
+## Code
 
  Inline `code`
 
@@ -78,7 +77,7 @@
  console.log(foo(5));
  ```
 
- ## Tables
+## Tables
 
  | Option | Description |
  | ------ | ----------- |
@@ -95,14 +94,14 @@
  | ext    | extension to be used for dest files. |
 
 
- ## Links
+## Links
 
  [link text](http://dev.nodeca.com)
 
  [link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
- ## Images
+## Images
 
  ![Minion](https://octodex.github.com/images/minion.png)
 
- ## The End!
+## The End!
