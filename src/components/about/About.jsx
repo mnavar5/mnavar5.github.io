@@ -1,6 +1,7 @@
 import "./about.css";
-import EthBit from "../../img/ethbit.jpg";
-import NYblc from "../../img/nyblockchain.jpg";
+import Bit from "../../img/bit2.jpg";
+// import NYblc from "../../img/nyblockchain.jpg";
+import Eth from "../../img/ethwall.jpg";
 
 const About = () => {
   return (
@@ -8,13 +9,13 @@ const About = () => {
       <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
-          <img src={NYblc} alt="" className="a-img"/>
+          <img src={Eth} alt="" className="a-img"/>
         </div>
       </div>
       <div className="a-right">
         <h1 className="a-title">About Me</h1>
         <p className="a-sub">
-          It is a long established fact, roughly 10% of the world’s money is physical. The rest exists digitally.
+        Expertise in creating efficient and reliable applications across multiple platforms.
         </p>
         <ul className="a-desc">
         <li>Towson University Computer Science Graduate</li> 
@@ -24,7 +25,7 @@ const About = () => {
         <li>Decentralized networks, applications, and block-chain technology researcher</li>         
         </ul>
         <div className="a-award">
-          <img src={EthBit} alt="" className="a-award-img" />
+          <img src={Bit} alt="" className="a-award-img" />
           <div className="a-award-texts">
             <h4 className="a-award-title">Block Chain Research Goal 2022</h4>
             <p className="a-award-desc">

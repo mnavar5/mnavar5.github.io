@@ -6,14 +6,14 @@ const Intro = () => {
         <div className="i">
             <div className="i-left">
                 <div className='i-left-wrapper'>
-                    <h2 className='i-intro'>Hello, my name is</h2>
+                    <h2 className='i-intro1'>Hello, my name is</h2>
                     <h1 className='i-intro'>Michel Navarro Bonifaz</h1>
                     <div className='i-title'>
                         <div className='i-title-wrapper'>
                             <div className='i-title-item'>Web 3.0</div>
                             <div className='i-title-item'>Metaverse</div>
                             <div className='i-title-item'>Research Data Scientist</div>
-                            <div className='i-title-item'>Entreprenur</div>
+                            <div className='i-title-item'>HealthCare</div>
                             <div className='i-title-item'>Block-Chain Research</div>
                             <div className='i-title-item'>Machine Learning</div>
                             <div className='i-title-item'>Artificial Intelligence</div>

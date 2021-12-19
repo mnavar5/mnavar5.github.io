@@ -8,7 +8,7 @@ const ProductList = () => {
       <div className="pl-texts">
         <h1 className="pl-title">Create & inspire.</h1>
         <p className="pl-desc">
-          Follow me on Github and Linkedin as well as some technologies im interested in exploring in 2022
+          Follow my Github and Linkedin as well as some technologies im interested in exploring in 2022.
         </p>
       </div>
       <div className="pl-list">
