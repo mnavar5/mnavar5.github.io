@@ -1,7 +1,7 @@
 import "./about.css";
 import Bit from "../../img/bit2.jpg";
-// import NYblc from "../../img/nyblockchain.jpg";
-import Eth from "../../img/ethwall.jpg";
+import NYblc from "../../img/nyblockchain.jpg";
+
 
 const About = () => {
   return (
@@ -9,7 +9,7 @@ const About = () => {
       <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
-          <img src={Eth} alt="" className="a-img"/>
+          <img src={NYblc} alt="" className="a-img"/>
         </div>
       </div>
       <div className="a-right">
