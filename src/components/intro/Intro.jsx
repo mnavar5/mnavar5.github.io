@@ -6,8 +6,8 @@ const Intro = () => {
         <div className="i">
             <div className="i-left">
                 <div className='i-left-wrapper'>
-                    <h2 className='i-intro'>Hello, my name is</h2>
-                    <h1 className='i-intro'>Michel Navarro Bonifaz</h1>
+                    <h2 className='i-intro'>Hello, My name is</h2>
+                    <h1 className='i-name'>Michel Navarro </h1>
                     <div className='i-title'>
                         <div className='i-title-wrapper'>
                             <div className='i-title-item'>Web 3.0</div>
@@ -20,7 +20,7 @@ const Intro = () => {
                         </div>
                     </div>
                     <p className='i-desc'>
-                        "I believe there’s always opportunity uncovered in data and a great team of specialist to create a new vision for the future."
+                        I design and develope applications of all sizes, specialize in web services, and research data sets using statistical analysis to discover underlying patterns and trends. 
                     </p>
                 </div>
                 <svg
