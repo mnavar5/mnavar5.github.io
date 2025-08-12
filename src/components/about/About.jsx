@@ -1,35 +1,39 @@
 import "./about.css";
-import Bit from "../../img/bit2.jpg";
-import NYblc from "../../img/nyblockchain.jpg";
+import AiConcept from "../../img/ai-drone2.jpg";       // Replace with your AI/tech abstract image
+import Workspace from "../../img/ai-thumbnail.jpg"; // Replace with your professional workspace photo
 
 
 const About = () => {
   return (
-    <div className="a">
+    <div className="a" aria-label="About Michel Navarro">
       <div className="a-left">
         <div className="a-card bg"></div>
         <div className="a-card">
-          <img src={NYblc} alt="" className="a-img"/>
+          <img src={AiConcept} alt="Abstract artificial intelligence and technology visualization" className="a-img" />
         </div>
       </div>
+
       <div className="a-right">
         <h1 className="a-title">About Me</h1>
+
         <p className="a-sub">
-        Expertise in creating efficient and reliable applications across multiple platforms.
+          I am a passionate software engineer and innovator dedicated to bridging cutting-edge technologies with impactful real-world solutions. My work revolves around building scalable AI-powered applications, leveraging data science, and crafting seamless digital experiences that empower businesses and communities.
         </p>
-        <ul className="a-desc">
-        <li>Towson University Computer Science Graduate</li> 
-        <li>Problem solving machine, eager to learn computers and computational processes to build websites, program robots, mine data and more.</li> 
-        <li>Experienced with theory and practice of computer science, exploring algorithms, programming languages and operating systems.</li>
-        <li>Software Enginnering, Data science, and Web Development Oriented</li>
-        <li>Decentralized networks, applications, and block-chain technology researcher</li>         
+
+        <ul className="a-desc" aria-label="Professional background and skills">
+          <li>Towson University Computer Science graduate with strong foundations in algorithms, programming languages, and system design.</li>
+          <li>A continuous learner and problem solver, specializing in software engineering, machine learning, and web development.</li>
+          <li>Exploring decentralized systems and blockchain technology as part of a broader vision for secure and transparent digital infrastructure.</li>
+          <li>Focused on creating reliable, scalable, and efficient platforms tailored to real business needs.</li>
+          <li>Passionate about applying data-driven insights and AI to unlock new possibilities and drive innovation.</li>
         </ul>
-        <div className="a-award">
-          <img src={Bit} alt="" className="a-award-img" />
+
+        <div className="a-award" role="region" aria-labelledby="innovation-goal">
+          <img src={Workspace} alt="Professional workspace with multiple monitors displaying code" className="a-award-img" />
           <div className="a-award-texts">
-            <h4 className="a-award-title">Block Chain Research Goal 2022</h4>
+            <h4 id="innovation-goal" className="a-award-title">Innovation & Technology Leadership</h4>
             <p className="a-award-desc">
-              Join me as I dive deep into block chain and decentralized technology in my goal for 2022.
+              Committed to continuous growth and driving technological innovation through AI, software development, and strategic problem-solving to build the future of digital solutions.
             </p>
           </div>
         </div>

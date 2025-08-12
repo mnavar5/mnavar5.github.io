@@ -1,98 +1,211 @@
 .a {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+  min-height: 80vh;
+  padding: 4rem 5vw;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background: #f5f7fa;
+  color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
-  .a-left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.a-left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-card.bg {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(135deg, #59b256 0%, #3a8f32 100%);
+  border-radius: 24px;
+  filter: blur(28px);
+  z-index: 0;
+  transition: background 0.3s ease;
+}
+
+.a-card {
+  width: 100%;
+  max-width: 400px;
+  height: 70vh;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background: white;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.a-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+}
+
+.a-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.a-right {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.a-title {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+}
+
+.a-sub {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.a-desc {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  color: #555;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.a-desc li {
+  margin-bottom: 0.75rem;
+}
+
+.a-award {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: #ecf0f1;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.a-award-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.a-award-texts {
+  flex: 1;
+}
+
+.a-award-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.a-award-desc {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+/* Dark Mode Overrides */
+.dark .a {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+.dark .a-card.bg {
+  background: linear-gradient(135deg, #317a13 0%, #1b4b08 100%);
+  filter: blur(22px);
+}
+
+.dark .a-card {
+  background: #1e1e1e;
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+}
+
+.dark .a-title {
+  color: #a2d729;
+}
+
+.dark .a-sub {
+  color: #b0b0b0;
+}
+
+.dark .a-desc {
+  color: #c0c0c0;
+}
+
+.dark .a-award {
+  background: #242424;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .a-award-title {
+  color: #a2d729;
+}
+
+.dark .a-award-desc {
+  color: #b5b5b5;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .a {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 2rem;
+    gap: 2rem;
   }
-  
-  .a-right {
-    flex: 1;
+
+  .a-left, .a-right {
+    max-width: 100%;
+    flex: none;
   }
-  
-  .a-card.bg {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    background-color: #333;
-  }
-  
+
   .a-card {
-    width: 60%;
-    height: 70vh;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
+    height: 300px;
+    max-width: 100%;
   }
-  
-  .a-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+  .a-award {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   .a-award-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 20px;
+    width: 100%;
+    height: 180px;
+    border-radius: 16px;
   }
-  
-  .a-title {
-    font-weight: 400;
-  }
-  
-  .a-sub {
-    margin: 20px 0px;
-  }
-  
-  .a-desc{
-      font-weight: 300;
-  }
-  
-  .a-award{
-      margin-top: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-  
-  .a-award-texts{
-      width: 70%;
-  }
-  
-  .a-award-title{
-      font-weight: bold;
-      color: #555;
-      margin-bottom: 10px;
-  }
-  
-  @media screen and (max-width:480px) {
-      .a{
-        flex-direction: column;
-        text-align: center;
-        margin-top: 50px;
-      }
-  
-      .a-left {
-        width: 100%;
-      }
-  
-      .a-card {
-        height: 30vh;
-      }
-  
-      .a-card.bg, .a-award {
-        display: none;
-      }
-  
-      .a-right{
-        padding: 20px;
-      }
-  }
+}

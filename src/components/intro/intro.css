@@ -1,126 +1,233 @@
-
-.i{
-    display:flex;
-    height: 100vh;
-   
-}
-
-.i-left{
-    flex: 1;
+/* Variables for light & dark mode */
+:root {
+    --color-bg-light: #fafafa;
+    --color-text-light: #222;
+    --color-accent: #59b256;
+    --color-accent-light: #a5d6a7;
+    --color-text-muted: #555;
+  
+    --color-bg-dark: #121212;
+    --color-text-dark: #e6e6e6;
+    --color-accent-dark: #88cc6e;
+    --color-text-muted-dark: #aaa;
+  }
+  
+  /* Base styles */
+  .intro {
     display: flex;
-    align-items:center;
-    justify-content: center;
-}
-
-.i-right{
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-light);
+    background-color: var(--color-bg-light);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  .intro.dark {
+    color: var(--color-text-dark);
+    background-color: var(--color-bg-dark);
+  }
+  
+  .intro-left,
+  .intro-right {
     flex: 1;
-    position: relative;
-}
-
-.i-left-wrapper{
-    padding:50px;
-    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-
-.i-intro{
-    font-size: 30px;
-    font-weight:300;
-}
-
-.i-name{
-    font-size: 60px;
-}
-
-.i-title{
+    justify-content: center;
+    position: relative;
+  }
+  
+  .intro-left {
+    padding-right: 4rem;
+  }
+  
+  .intro-left-wrapper {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    user-select: none;
+  }
+  
+  .intro-intro {
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    letter-spacing: 1px;
+    margin: 0;
+    user-select: text;
+  }
+  
+  .intro-name {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+    margin: 0;
+    user-select: text;
+    transition: color 0.4s ease;
+  }
+  
+  .intro.dark .intro-name {
+    color: var(--color-accent-dark);
+  }
+  
+  .intro-title {
     height: 50px;
-    overflow:hidden;
-    
-
-}
-
-.i-title-wrapper{
-    height: 100%;
-    animation: move 10s ease-in-out infinite alternate;
-}
-
-@keyframes move {
-    19%{
-        transform: translateY(-50px);
-    }
-    31%{
-        transform: translateY(-100px);
-    }
-    45%{
-        transform: translateY(-150px);
-    }
-    58%{
-        transform: translateY(-200px);
-    }
-    69%{
-        transform: translateY(-250px);
-    }
-    79%{
-        transform: translateY(-300px);
-    }
-    100%{
-        transform: translateY(-350px);
-    }
-}
-
-.i-title-item{
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .intro-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    animation: scrollUp 14s linear infinite;
+    height: 700px; /* 7 titles * 50px * 2 for seamless loop */
+  }
+  
+  .intro-title-item {
     height: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    color:#59b256;
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: var(--color-accent);
     display: flex;
     align-items: center;
-}
-
-.i-scroll{
-    width: 30px;
-    height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    user-select: none;
+    transition: color 0.4s ease;
+  }
+  
+  .intro.dark .intro-title-item {
+    color: var(--color-accent-dark);
+  }
+  
+  /* Smooth vertical scroll animation */
+  @keyframes scrollUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-350px);
+    }
+  }
+  
+  .intro-desc {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    font-weight: 400;
+    user-select: text;
+    transition: color 0.4s ease;
+  }
+  
+  .intro.dark .intro-desc {
+    color: var(--color-text-muted-dark);
+  }
+  
+  .intro-right {
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding-left: 4rem;
+    position: relative;
+  }
+  
+  /* Lottie player styles */
+  .lottie-player {
+    width: 320px;
+    height: 320px;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background: var(--color-bg-light);
+    transition: background-color 0.4s ease;
+    user-select: none;
+  }
+  
+  .intro.dark .lottie-player {
+    background: #1e1e1e;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Scroll icon */
+  .scroll-icon {
+    width: 40px;
+    height: 40px;
     position: absolute;
     bottom: 20px;
-}
-
-.i-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-}
-
-.i-bg{
-    clip-path: polygon(100% 0%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-    background-color: #59b256;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    right:0;
-}
-
-
-@media screen and (max-width: 480px) {
-    .i {
-      flex-direction: column;
-    }
-  
-    .i-left-wrapper {
-    
-      padding: 10px;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 100%;
-    }
-  
-    .i-desc{
-      display: none;
-    }
-    
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-accent);
+    opacity: 0.7;
+    transition: color 0.4s ease, opacity 0.4s ease;
+    user-select: none;
   }
+  
+  .intro.dark .scroll-icon {
+    color: var(--color-accent-dark);
+    opacity: 0.85;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 768px) {
+    .intro {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      height: auto;
+    }
+    .intro-left,
+    .intro-right {
+      padding: 0;
+      flex: none;
+      width: 100%;
+    }
+    .intro-left-wrapper {
+      max-width: 100%;
+      padding-bottom: 2rem;
+    }
+    .lottie-player {
+      width: 280px;
+      height: 280px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .intro-intro {
+      font-size: 1.6rem;
+    }
+    .intro-name {
+      font-size: 2.8rem;
+    }
+    .intro-title-item {
+      font-size: 1.2rem;
+      height: 36px;
+    }
+    .intro-title {
+      height: 36px;
+      margin-bottom: 1.5rem;
+    }
+    .intro-desc {
+      font-size: 1rem;
+      max-width: 100%;
+      line-height: 1.4;
+    }
+    .lottie-player {
+      width: 220px;
+      height: 220px;
+    }
+    .scroll-icon {
+      width: 28px;
+      height: 28px;
+      bottom: 16px;
+    }
+  }
+  
