@@ -8,7 +8,7 @@ import { ThemeContext } from "../../context";
 
 const Contact = () => {
   const formRef = useRef();
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(false);
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
@@ -24,7 +24,8 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setDone(true)
+          setDone(true);
+          e.target.reset();
         },
         (error) => {
           console.log(error.text);
@@ -33,37 +34,38 @@ const Contact = () => {
   };
 
   return (
-    <div className="c">
+    <div className={`c${darkMode ? " dark" : ""}`} aria-label="Contact Michel Navarro">
       <div className="c-bg"></div>
       <div className="c-wrapper">
         <div className="c-left">
           <h1 className="c-title">Let's discuss your project</h1>
           <div className="c-info">
             <div className="c-info-item">
-              <img src={Phone} alt="" className="c-icon" />
+              <img src={Phone} alt="Phone icon" className="c-icon" />
               443 653 5o22
             </div>
             <div className="c-info-item">
-              <img className="c-icon" src={Email} alt="" />
+              <img src={Email} alt="Email icon" className="c-icon" />
               mnava.work@gmail.com
             </div>
             <div className="c-info-item">
-              <img className="c-icon" src={Address} alt="" />
-              Towson, Maryland 
+              <img src={Address} alt="Address icon" className="c-icon" />
+              Towson, Maryland
             </div>
           </div>
         </div>
+
         <div className="c-right">
           <p className="c-desc">
             <b>What’s your story?</b> Get in touch. Always available to discuss new frameworks and opportunities.
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
-            <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Name" name="user_name" />
-            <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Subject" name="user_subject" />
-            <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Email" name="user_email" />
-            <textarea style={{backgroundColor: darkMode && "#333"}} rows="5" placeholder="Message" name="message" />
-            <button>Submit</button>
-            {done && "Thank you..."}
+            <input type="text" placeholder="Name" name="user_name" required />
+            <input type="text" placeholder="Subject" name="user_subject" required />
+            <input type="email" placeholder="Email" name="user_email" required />
+            <textarea rows="5" placeholder="Message" name="message" required />
+            <button type="submit">Submit</button>
+            {done && <span className="c-thankyou">Thank you for reaching out!</span>}
           </form>
         </div>
       </div>
