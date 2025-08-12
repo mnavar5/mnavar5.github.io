@@ -1,20 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.607e17d0.css",
-    "main.js": "/static/js/main.86d158cb.js",
-    "static/media/nyblockchain.jpg": "/static/media/nyblockchain.0f13567610bc220ff712.jpg",
-    "static/media/bit2.jpg": "/static/media/bit2.2532d5ecac2795009d99.jpg",
-    "static/media/me2.png": "/static/media/me2.f92cc53ebdfa66c55f55.png",
+    "main.css": "/static/css/main.0c61fdd2.css",
+    "main.js": "/static/js/main.c440637d.js",
+    "static/media/ai-thumbnail.jpg": "/static/media/ai-thumbnail.e354efd8335901fa3065.jpg",
+    "static/media/ai-drone2.jpg": "/static/media/ai-drone2.807153231df2c3f86661.jpg",
     "static/media/address.png": "/static/media/address.b438501ee709ec032ff0.png",
     "static/media/sun.png": "/static/media/sun.d07c9ecea0ad9094855a.png",
     "static/media/moon.png": "/static/media/moon.04697630fd964075bc07.png",
     "static/media/gmail.png": "/static/media/gmail.a2f2146f929409405da0.png",
     "index.html": "/index.html",
-    "main.607e17d0.css.map": "/static/css/main.607e17d0.css.map",
-    "main.86d158cb.js.map": "/static/js/main.86d158cb.js.map"
+    "main.0c61fdd2.css.map": "/static/css/main.0c61fdd2.css.map",
+    "main.c440637d.js.map": "/static/js/main.c440637d.js.map"
   },
   "entrypoints": [
-    "static/css/main.607e17d0.css",
-    "static/js/main.86d158cb.js"
+    "static/css/main.0c61fdd2.css",
+    "static/js/main.c440637d.js"
   ]
 }
